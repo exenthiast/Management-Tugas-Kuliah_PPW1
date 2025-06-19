@@ -8,6 +8,8 @@ FROM
     jadwal j
 JOIN
     mata_kuliah mk ON j.id_mk = mk.id
+WHERE 
+    mk.id_user = '$user_id'
 ORDER BY 
     FIELD(j.hari, 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'),
     j.jam_mulai;
