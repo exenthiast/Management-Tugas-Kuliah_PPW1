@@ -8,3 +8,5 @@ FROM
     tugas t
 JOIN
     mata_kuliah mk ON t.id_mk = mk.id;
+WHERE
+    t.id_user = '$user_id';
